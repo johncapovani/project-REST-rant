@@ -3,7 +3,7 @@
 REST-Rant is an app where users can review restaurants.
 
 
- As a a fellow restraunt  goer there are certain feautres that are required when determiting if the dining options on the radar is a good one. Menus, reviews, location, prices are all important aspects of finding that perfect restraunt to spend your hard earned money at. 
+As a fellow restaurant goer, there are certain factors that are required when deciding if the dining options on the radar are good ones. Menus, reviews, location, and prices are all important aspects of finding that perfect restaurant to spend your hard-earned money at.
 
  Color Scheme: Contemparary Coffee Color Palette
 
