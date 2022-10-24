@@ -1,21 +1,30 @@
+// Modules and Globals
 require('dotenv').config()
 const express = require('express')
 const app = express()
 
-//JSX is the router that defines the view engine
+// Express Settings
+app.set('views', __dirname + '/views')
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
 
+//Lets express know where to call the staic folder from
+app.use(express.static('public'))
+
+//Set up body parser
+app.use(express.urlencoded({ extended: true }))
+
+
+// Controllers & Routes
 app.use('/places', require('./controllers/places'))
 
-//The render method knows to look for a views folder when you call the render method
 app.get('/', (req, res) => {
     res.render('home')
 })
 
-
 app.get('*', (req, res) => {
-    res.send('<h1>Ruh Roh! Raggy we got a 404 Page... We gotta get out of here</h1>')
+    res.render('error404')
 })
 
+// Listen for Connections
 app.listen(process.env.PORT)
