@@ -6,7 +6,7 @@ const methodOverride = require('method-override')
 
 const app = express()
 
-app.use(methodOverride('_method'))
+
 // Express Settings
 app.set('views', __dirname + '/views')
 app.set('view engine', 'jsx')
@@ -17,7 +17,7 @@ app.use(express.static('public'))
 
 //Set up body parser
 app.use(express.urlencoded({ extended: true }))
-
+app.use(methodOverride('_method'))
 
 
 
